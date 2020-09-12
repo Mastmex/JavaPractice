@@ -159,6 +159,7 @@ class nursery{
     {
         dogs[count++]=new dog(a,n);
     }
+    //sdsdsdsdsd
     int NumOfDogs()
     {
         return dogs.length;
