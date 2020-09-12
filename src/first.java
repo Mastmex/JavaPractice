@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -147,7 +148,7 @@ class dog{
     }
 }
 class nursery{
-     public dog[] dogs;
+     public dog[] dogs = new dog[10];
     int count=3;
     nursery(){
         dogs[0]=new dog(4,"Rina");
@@ -163,17 +164,15 @@ class nursery{
         return dogs.length;
     }
     void DogsDescribe(){
-        for(int i=0;i<dogs.length;i++)
+        for(int i=0;i<4;i++)
             System.out.println(dogs[i].ToString());
     }
     void OpenDoors()
     {
-        for(int i=0;i<dogs.length;i++)
-            System.out.println(dogs[i].ToString());
+        for(int i=0;i<4;i++)
+            dogs[i].bork();
 
     }
-
-
 }
 class ard {
     public static void main(String[] args) {
@@ -202,6 +201,7 @@ class ard {
         gg.AddDog(in.nextInt(),in.nextLine());
         gg.NumOfDogs();
         gg.DogsDescribe();
+        gg.OpenDoors();
     }
 }
 
