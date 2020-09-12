@@ -104,12 +104,81 @@ public class first {
 
 class shape{
     String name;
-    int
+     int ugl;
+     shape(int u, String n)
+     {
+         this.name=n;
+         this.ugl=u;
+     }
+     void tostring(){
+         System.out.println("Это "+name+". У него "+ugl+" углов.");
+     }
+}
+class dog{
+    String name;
+    int age;
+    int humanAge;
+    dog(int a, String n){
+        this.name=n;
+        this.age=a;
+        this.humanAge=this.age*8;
+    }
+    int getAge()
+    {
+        return this.age;
+    }
+    String getName()
+    {
+        return this.name;
+    }
+    int getHumanAge()
+    {
+        return this.humanAge;
+    }
+    String ToString(){
+        return "My name is "+this.name+". I'm "+this.age+" years old. My human age is "+this.humanAge+".";
+    }
+    void bork(){
+        do
+        System.out.println("Bork!!");
+        while(Math.random()>=0.4);
+        if(Math.random()<=0.1)
+            System.out.printf("Эх, жизнь… Жизнь собачья. Весь день на цепи… Всю ночь на цепи… Всю жизнь на цепи. Сиди, охраняй. А что охранять? Дрова были, так и те вчера украли. Всё, воровать больше нечего. Дрова украли, а спрос с меня: «Куда смотрел?», «На что ты здесь посажен?» То-то и оно, что посажен, мне до дров не дотянуться, цепь не пускает. Вот дрова все и вынесли. Дома надо ночевать, а не в гостях. Кого мне было ночью будить? Соседей? Так соседи же дрова и свистнули. ");
+    }
+}
+class nursery{
+     public dog[] dogs;
+    int count=3;
+    nursery(){
+        dogs[0]=new dog(4,"Rina");
+        dogs[1]=new dog(9,"Einstein");
+        dogs[2]=new dog(10,"Kirill");
+    }
+    void AddDog(int a, String n)
+    {
+        dogs[count++]=new dog(a,n);
+    }
+    int NumOfDogs()
+    {
+        return dogs.length;
+    }
+    void DogsDescribe(){
+        for(int i=0;i<dogs.length;i++)
+            System.out.println(dogs[i].ToString());
+    }
+    void OpenDoors()
+    {
+        for(int i=0;i<dogs.length;i++)
+            System.out.println(dogs[i].ToString());
+
+    }
+
+
 }
 class ard {
     public static void main(String[] args) {
-        {
-            first x = new first();
+        Scanner in = new Scanner(System.in);
+        /*first x = new first();
             for (int i = 0; i < args.length; i++) {
                 System.out.println("args[" + i + "] : " + args[i]);
             }
@@ -120,7 +189,19 @@ class ard {
             x.rand1();
             x.rand2();
             x.fact();
-        }
+
+        shape fig = new shape(in.nextInt(),in.nextLine());
+        fig.tostring();
+        dog g=new dog(7,"Alice");
+        System.out.println(g.getName());
+        System.out.println(g.getAge());
+        System.out.println(g.getHumanAge());
+        System.out.println(g.ToString());
+        g.bork();*/
+        nursery gg=new nursery();
+        gg.AddDog(in.nextInt(),in.nextLine());
+        gg.NumOfDogs();
+        gg.DogsDescribe();
     }
 }
 
