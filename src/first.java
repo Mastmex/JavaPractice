@@ -101,6 +101,11 @@ public class first {
         System.out.println("-------------------------------");
     }
 }
+
+class shape{
+    String name;
+    int
+}
 class ard {
     public static void main(String[] args) {
         {
