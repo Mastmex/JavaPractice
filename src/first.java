@@ -1,6 +1,6 @@
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
+
+import bodyparts.*;
 
 public class first {
     int[] arr = {5, 5, 7, 1, 6, 7, 8, 2, 14, 5};
@@ -45,7 +45,7 @@ public class first {
         }
         System.out.println("-------------------------------");
     }
-    double[] sort(double a[]){
+    double[] sort(double[] a){
         double[] b =a;
         double length=a.length;
         double temp;
@@ -175,6 +175,63 @@ class nursery{
 
     }
 }
+class Circle{
+    private double R,D,S,C;
+    void setR(double r){
+        this.R=r;
+        D=2*R;
+        C=2*Math.PI*R;
+        S=Math.PI*R*R;
+    }
+
+    public double getC() {
+        return C;
+    }
+
+    public double getD() {
+        return D;
+    }
+
+    public double getR() {
+        return R;
+    }
+
+    public double getS() {
+        return S;
+    }
+}
+class Human{
+    String N;
+    int A;
+    Human(int a, String name)
+    {
+        this.N=name;
+        this.A=a;
+    }
+    bodyparts.Hands Hnd=new bodyparts.Hands(2,3);
+    bodyparts.Head Hd=new bodyparts.Head(1,5);
+    Legs Lg = new Legs(2,4);
+}
+class Book{
+    String D,N,A;
+    boolean I;
+    Book(String a, String n, String d,boolean i){
+        D=d;
+        A=a;
+        N=n;
+        I=i;
+    }
+    void info()
+    {
+        System.out.println("Данная книга называется "+N);
+        System.out.println("Ее написал "+A);
+        System.out.println("Напечатали ее "+D);
+        if(I)
+            System.out.println("Эта книга интересная");
+        else
+            System.out.println("Эта книга не очень интересная");
+    }
+}
 class ard {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -197,12 +254,27 @@ class ard {
         System.out.println(g.getAge());
         System.out.println(g.getHumanAge());
         System.out.println(g.ToString());
-        g.bork();*/
+        g.bork();
         nursery gg=new nursery();
         gg.AddDog(in.nextInt(),in.nextLine());
         gg.NumOfDogs();
         gg.DogsDescribe();
-        gg.OpenDoors();
+        gg.OpenDoors();*/
+        Circle circ=new Circle();
+        circ.setR(in.nextDouble());
+        System.out.println("Радиус="+circ.getR());
+        System.out.println("Диаметр="+circ.getD());
+        System.out.println("Длина окружности="+circ.getC());
+        System.out.println("Площадь="+circ.getS());
+        System.out.println("-----------------------------------");
+        Human loh = new Human(15,"Arsen");
+        loh.Hd.think();
+        loh.Hnd.clap();
+        loh.Hnd.wash();
+        loh.Lg.go();
+        loh.Lg.stop();
+        Book hook = new Book(in.nextLine(),in.nextLine(),in.nextLine(),in.hasNextBoolean());
+        hook.info();
     }
 }
 
