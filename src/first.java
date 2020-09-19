@@ -1,6 +1,7 @@
+import java.lang.invoke.StringConcatException;
 import java.util.*;
-
 import bodyparts.*;
+import shapes.bank.*;
 
 public class first {
     int[] arr = {5, 5, 7, 1, 6, 7, 8, 2, 14, 5};
@@ -267,14 +268,23 @@ class ard {
         System.out.println("Длина окружности="+circ.getC());
         System.out.println("Площадь="+circ.getS());
         System.out.println("-----------------------------------");
-        Human loh = new Human(15,"Arsen");
+        Human loh = new Human(10,"Arsen");
         loh.Hd.think();
         loh.Hnd.clap();
         loh.Hnd.wash();
         loh.Lg.go();
         loh.Lg.stop();
-        Book hook = new Book(in.nextLine(),in.nextLine(),in.nextLine(),in.hasNextBoolean());
+        Book hook = new Book("Karol","Alice in Wonderland","1865",true);
         hook.info();
+        shapes.bank.Circle ya = new shapes.bank.Circle(in.nextDouble());
+        ya.calcArea();
+        ya.calcPerimeter();
+        Rectangle lyousha = new Rectangle(in.nextDouble(),in.nextDouble());
+        lyousha.calcArea();
+        lyousha.calcPerimeter();
+        Triangle biba = new Triangle(in.nextDouble(),in.nextDouble(),in.nextDouble());
+        biba.calcArea();
+        biba.calcPerimeter();
     }
 }
 
