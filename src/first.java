@@ -1,7 +1,9 @@
 import java.lang.invoke.StringConcatException;
 import java.util.*;
 import bodyparts.*;
+import lesson4.Employee;
 import shapes.bank.*;
+import lesson4.Company;
 
 public class first {
     int[] arr = {5, 5, 7, 1, 6, 7, 8, 2, 14, 5};
@@ -261,7 +263,7 @@ class ard {
         gg.NumOfDogs();
         gg.DogsDescribe();
         gg.OpenDoors();*/
-        Circle circ=new Circle();
+        /*Circle circ=new Circle();
         circ.setR(in.nextDouble());
         System.out.println("Радиус="+circ.getR());
         System.out.println("Диаметр="+circ.getD());
@@ -284,7 +286,32 @@ class ard {
         lyousha.calcPerimeter();
         Triangle biba = new Triangle(in.nextDouble(),in.nextDouble(),in.nextDouble());
         biba.calcArea();
-        biba.calcPerimeter();
+        biba.calcPerimeter();*/
+        String a;
+        Company kartoshka = new Company(180,80,10);
+        List<Employee> print1 = kartoshka.getTopSalaryStaff(10);
+        for(int i=0;i<10;i++) {
+            a = print1.get(i).toString();
+        }
+        System.out.println("-------------------------------------------------");
+        List<Employee> print2 = kartoshka.getLowestSalaryStaff(30);
+        for(int i=0;i<30;i++) {
+            a = print2.get(i).toString();
+        }
+        System.out.println("AfterFire@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+        for(int i=0;i<135;i++)
+            kartoshka.fire();
+        List<Employee> print3 = kartoshka.getTopSalaryStaff(10);
+        for(int i=0;i<10;i++) {
+            a = print3.get(i).toString();
+        }
+        System.out.println("-------------------------------------------------");
+        List<Employee> print4 = kartoshka.getLowestSalaryStaff(30);
+        for(int i=0;i<30;i++) {
+            a = print4.get(i).toString();
+        }
+
+
     }
 }
 
