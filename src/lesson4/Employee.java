@@ -18,7 +18,7 @@ public class Employee implements Comparable<Employee>{
     }
     @Override
     public String toString(){
-        System.out.println(okl+" "+dlj);
+        System.out.println(okl+" "+dlj+ " "+ name+" "+sName);
         return(okl+" "+dlj);
     }
     /*public int compareTo(Employee o)
