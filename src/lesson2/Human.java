@@ -1,8 +1,7 @@
 package lesson2;
 
-import lesson2.bodyparts.Hands;
-import lesson2.bodyparts.Head;
-import lesson2.bodyparts.Legs;
+import lesson2.bodyparts.*;
+
 
 public class Human {
     String N;
