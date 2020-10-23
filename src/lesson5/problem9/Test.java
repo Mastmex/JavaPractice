@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.problem9;
 
 import lesson5.problem9.Company;
 import lesson5.problem9.Employee;
