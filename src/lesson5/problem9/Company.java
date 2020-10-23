@@ -5,37 +5,51 @@ import java.util.Scanner;
 
 public class Company {
     ArrayList<Employee> kartoha;
-    public Company(){
+
+    public Company() {
         kartoha = new ArrayList<Employee>();
     }
-    void autoHair(int n)
-    {
-        for(int i=0;i<n;i++)
-        {
+
+    public void autoHair(int n) {
+        for (int i = 0; i < n; i++) {
             kartoha.add(new Employee());
         }
     }
-    void manualHair(String n, String sn, int d,int m, int y, String a, int nom, int s)
-    {
-        kartoha.add(new Employee(n,sn,d,m,y,a,nom,s));
+
+    public void manualHair(String n, String sn, int d, int m, int y, String a, int nom, int s) {
+        kartoha.add(new Employee(n, sn, d, m, y, a, nom, s));
     }
-    void autoFire(int n)
-    {
-        for(int i=0;i<n;i++)
-        kartoha.remove(kartoha.size());
+
+    public void autoFire(int n) {
+        for (int i = 0; i < n; i++)
+            kartoha.remove(kartoha.size());
     }
-    void manualFire(int n)
-    {
+
+    public void manualFire(int n) {
         kartoha.remove(n);
     }
-    public void findName(HandleEmployees handleEmployee)
-    {
+
+     public void findName(HandleEmployees handleEmployee) {
         Scanner in = new Scanner(System.in);
-        String nm= in.nextLine();
-        for(Employee i:kartoha)
-        {
-            if (i.getName()==nm)
-                handleEmployee.handleEmployees()
+        String nm = in.nextLine();
+        int c=0;
+        for (Employee i : kartoha) {
+            if (i.getName().equals(nm)){
+                handleEmployee.handleEmployees(i);
+                c++;}
+
+        }
+         System.out.println(c);
+    }
+
+    public void yearCheck(HandleEmployees handleEmployees) {
+        Scanner in = new Scanner(System.in);
+        int y = in.nextInt();
+        for (Employee i : kartoha) {
+            if (i.getYear() >= y) {
+                handleEmployees.handleEmployees(i);
+            }
         }
     }
 }
+

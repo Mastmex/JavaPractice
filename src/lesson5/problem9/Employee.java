@@ -64,6 +64,10 @@ public class Employee {
     public String getsName() {
         return sName;
     }
+    public int getYear()
+    {
+        return 1900+this.bDay.getYear();
+    }
     @Override
     public String toString()
     {
