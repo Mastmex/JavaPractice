@@ -1,6 +1,5 @@
-package lesson8;
+package lesson7;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Three {

@@ -1,32 +1,46 @@
 package lesson8;
 
+import com.sun.source.util.Trees;
+
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Two {
+    TreeSet<String> kartoha;
     Scanner in = new Scanner(System.in);
-    Two() {
-        String x = in.nextLine();
-        String[] words;
-        words=x.split("\\s");
-        switch (words.length){
-            case 2:
-            {
-                System.out.println("Фамилия: "+words[0]);
-                System.out.println("Имя: "+words[1]);
+    boolean flag=false;
+    public Two(){
+        kartoha=new TreeSet<>();
+        for(;;)
+        {
+            String kekw=in.nextLine();
+            switch (kekw){
+                case "ADD":
+                    add(kekw);
+                    break;
+                case "LIST":
+                    list();
+                    break;
+                case "EXIT":
+                    flag=true;
+                    break;
+                default:
+                    System.out.println("Повторите ввод");
+                    break;
             }
-            break;
-            case 3:
-            {
-                System.out.println("Фамилия: "+words[0]);
-                System.out.println("Имя: "+words[1]);
-                System.out.println("Отчество: "+words[2]);
-            }
-            break;
-            default:
-                System.out.println("Введенная строка не является ФИО");
+            if(flag)
                 break;
         }
+    }
+    void list(){
+        for(String i: kartoha)
+            System.out.println(i);
+    }
+    void add(String s){
 
-
+    }
+    boolean check(String s)
+    {
+return true;
     }
 }
