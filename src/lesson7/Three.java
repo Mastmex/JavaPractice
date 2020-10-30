@@ -11,8 +11,7 @@ public class Three {
     boolean flag3=true;
     int counter = 0;
     Scanner in = new Scanner(System.in);
-    Three() {
-        text = in.nextLine();
+    public boolean check(String text){
         char[] a = text.toCharArray();
         for (char i : a) {
             if (i >= '0' && i <= '9') {
@@ -94,8 +93,15 @@ public class Three {
                 }
 
             }
-            System.out.println(num);
+            return true;
          }
-        else System.out.println("Неверный формат номера");
+        else {
+            //System.out.println("Неверный формат номера");
+            return false;
+        }
+    }
+    public String additional()
+    {
+        return num;
     }
 }

@@ -59,7 +59,7 @@ public class Two {
             if(i=='@')
                 at++;
         }
-        if(at==2)
+        if(at>=2)
             return false;
         if(s.indexOf("@")>s.indexOf("."))
             return false;
