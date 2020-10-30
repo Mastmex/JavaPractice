@@ -6,7 +6,7 @@ import java.util.*;
 
 
 public class Three8 {
-    Map<String,String> x= new TreeMap<>();;
+    Map<String,String> x= new HashMap<>();
 
     Scanner in = new Scanner(System.in);
     boolean check;
@@ -58,11 +58,12 @@ public class Three8 {
         }
         return null;
     }
-    static <T,E> void list(Map<T, E> map)
+    static <T,E> void list(Map<String, String> map)
     {
-        for(Map.Entry<T, E> entry : map.entrySet())
+        map.entrySet().stream().sorted(Map.Entry.<String, String>comparingByValue()).forEach(System.out::println);
+        /*for(Map.Entry<T, E> entry : map.entrySet())
         {
             System.out.println(entry.getKey() +" ---> "+ entry.getValue());
-        }
+        }*/
     }
 }
