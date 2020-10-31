@@ -1,15 +1,12 @@
 package lesson9;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Comparing {
     List<String> kartoha = new ArrayList<>();
-
-    public Comparing(int n)
+    public Comparing(long n)
     {
-        for(int i=0;i<n;i++) {
+        for(long i=0;i<n;i++) {
             Generator gen=new Generator();
             kartoha.add(gen.generate());
         }
@@ -26,6 +23,33 @@ public class Comparing {
     }
     public  void binFinder(String num){
         long time1= System.nanoTime();
+        if(Collections.binarySearch(kartoha,num)>=0)
+            System.out.println("Бинарный поиск: номер найден.");
+        else
+            System.out.println("Бинарный поиск: номер не найден.");
+        long time2=System.nanoTime();
+        System.out.println("Поиск занял: "+(time2-time1));
     }
-
+    public void hashFinder(String num)
+    {
+        HashSet<String> goha = new HashSet<>(kartoha);
+        long time1= System.nanoTime();
+        if(goha.contains(num))
+            System.out.println("Поиск в HashSet: номер найден.");
+        else
+            System.out.println("Поиск в HashSet: номер не найден.");
+        long time2=System.nanoTime();
+        System.out.println("Поиск занял: "+(time2-time1));
+    }
+    public void treeFinder(String num)
+    {
+        TreeSet<String> goha = new TreeSet<>(kartoha);
+        long time1= System.nanoTime();
+        if(goha.contains(num))
+            System.out.println("Поиск в HashSet: номер найден.");
+        else
+            System.out.println("Поиск в HashSet: номер не найден.");
+        long time2=System.nanoTime();
+        System.out.println("Поиск занял: "+(time2-time1));
+    }
 }
