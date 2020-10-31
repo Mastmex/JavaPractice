@@ -38,8 +38,11 @@ public class One {
         }
     }
     void List() {
-        for(String i:kartoha)
-            System.out.println(i);
+        int l=0;
+        for(String i:kartoha) {
+            System.out.println(l+" "+i);
+            l++;
+        }
     }
     void Add(String[] s){
         int index=0;
@@ -82,7 +85,7 @@ public class One {
             }
             catch (Exception e)
             {
-                System.out.println("Повторите ввод");
+                kartoha.add(l);
             }
         }
     }
