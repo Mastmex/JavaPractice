@@ -7,7 +7,7 @@ public class Test {
         l.binFinder("A777CH69");
         l.hashFinder("A777CH69");
         l.treeFinder("A777CH69");
-//        System.out.println(l.kartoha.get(150000));
+//        System.out.println(l.kartoha.get(15000));
     }
 
 
