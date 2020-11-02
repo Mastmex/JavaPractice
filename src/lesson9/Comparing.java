@@ -19,7 +19,7 @@ public class Comparing {
         else
             System.out.println("Поиск перебором: номер не найден.");
         long time2=System.nanoTime();
-        System.out.println("Поиск занял: "+(time2-time1));
+        System.out.println("Поиск занял: "+(time2-time1)+" нс");
     }
     public  void binFinder(String num){
         long time1= System.nanoTime();
@@ -28,7 +28,7 @@ public class Comparing {
         else
             System.out.println("Бинарный поиск: номер не найден.");
         long time2=System.nanoTime();
-        System.out.println("Поиск занял: "+(time2-time1));
+        System.out.println("Поиск занял: "+(time2-time1)+" нс");
     }
     public void hashFinder(String num)
     {
@@ -39,7 +39,7 @@ public class Comparing {
         else
             System.out.println("Поиск в HashSet: номер не найден.");
         long time2=System.nanoTime();
-        System.out.println("Поиск занял: "+(time2-time1));
+        System.out.println("Поиск занял: "+(time2-time1)+" нс");
     }
     public void treeFinder(String num)
     {
@@ -50,6 +50,6 @@ public class Comparing {
         else
             System.out.println("Поиск в HashSet: номер не найден.");
         long time2=System.nanoTime();
-        System.out.println("Поиск занял: "+(time2-time1));
+        System.out.println("Поиск занял: "+(time2-time1)+" нс");
     }
 }
