@@ -15,6 +15,8 @@ public class CopyPaster {
         path2 = in.nextLine();
         f = new File(path1);
         f2= new File(path2);
+        if(!f2.exists())
+            f2.mkdir();
         copy(f,f2);
         Logger x = new Logger(l);
         l.print(path1,path2);
