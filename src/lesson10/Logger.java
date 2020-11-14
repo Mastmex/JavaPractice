@@ -72,4 +72,16 @@ public class Logger {
             System.out.println(e);
         }
     }
+    public void print(String t, String t2) throws IOException {
+        System.out.println("Скопированно из "+ t+ " в"+ t2);
+        Date date = new Date();
+        w.write(date.toString());
+        w.append(' ');
+        w.write("Скопированно из ");
+        w.write(t);
+        w.write(" в");
+        w.write(t2);
+        w.append('\n');
+        w.flush();
+    }
 }

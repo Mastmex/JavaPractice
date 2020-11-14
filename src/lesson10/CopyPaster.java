@@ -10,7 +10,7 @@ public class CopyPaster {
     String path1;
     String path2;
     File f,f2;
-    public CopyPaster() throws IOException {
+    public CopyPaster(Logger l) throws IOException {
         Scanner in = new Scanner(System.in);
         System.out.println("Какую:");
         path1 = in.nextLine();
@@ -19,6 +19,8 @@ public class CopyPaster {
         f = new File(path1);
         f2= new File(path2);
         copy(f,f2);
+        Logger x = new Logger(l);
+        l.print(path1,path2);
     }
     private void copy(File f1,File dest) throws IOException {
         File[] files = f1.listFiles();
