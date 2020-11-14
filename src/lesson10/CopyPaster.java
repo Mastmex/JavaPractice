@@ -1,9 +1,6 @@
 package lesson10;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class CopyPaster {
@@ -36,13 +33,17 @@ public class CopyPaster {
                 {
                     File l = new File(dest.getPath(),item.getName());
                     l.createNewFile();
-                    FileReader fr = new FileReader(item);
+                    BufferedReader x = new BufferedReader(new FileReader(item));
                     FileWriter fw = new FileWriter(l);
                     char[] buf= new char[(int)item.length()];
-                    fr.read(buf);
+                    x.read(buf);
                     fw.write(buf);
+                    fw.close();
+                    x.close();
+
                 }
             }
         }
     }
 }
+
