@@ -9,11 +9,14 @@ public class test {
         Circle ya = new Circle(in.nextDouble());
         ya.calcArea();
         ya.calcPerimeter();
-        Rectangle lyousha = new Rectangle(in.nextDouble(),in.nextDouble());
+        lesson3.shapes.bank.Rectangle lyousha = new Rectangle(in.nextDouble(),in.nextDouble());
         lyousha.calcArea();
         lyousha.calcPerimeter();
-        Triangle biba = new Triangle(in.nextDouble(),in.nextDouble(),in.nextDouble());
-        biba.calcArea();
-        biba.calcPerimeter();
+        Triangle bible = new Triangle(in.nextDouble(),in.nextDouble(),in.nextDouble());
+        bible.calcArea();
+        bible.calcPerimeter();
+        lesson3.movable.Rectangle rect = new lesson3.movable.Rectangle(in.nextDouble(),in.nextDouble());
+        rect.calcArea();
+        rect.moveRect(in.nextDouble(),in.nextDouble());
     }
 }

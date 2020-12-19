@@ -8,5 +8,7 @@ public class test {
         x.Hnd.wash();
         x.Lg.go();
         x.Lg.stop();
+        Book hook = new Book("Karol","Alice in Wonderland","1865",true);
+        hook.info();
     }
 }
